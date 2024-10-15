@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -12,6 +13,7 @@
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -32,6 +34,7 @@
       --Slate300: hsl(212, 45%, 89%);
       --Slate500: hsl(216, 15%, 48%);
       --Slate900: hsl(218, 44%, 22%);
+      --blue: hsl(216, 97%, 59%);
     }
 
     *::before, *, *::after {
@@ -45,7 +48,49 @@
 
     body {
       background-color: var(--Slate300);
+      height: 100dvh;
+      position: relative;
     }
+
+    .qrComponent {
+      background-color: var(--white);
+      border-radius: 20px;
+      height: 499px;
+      width: 320px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      inset: 50% 0 0 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .qrComponent h2 {
+      font-size: 22px;
+    }
+
+    .qrComponent__content {
+      margin-top: 20px;
+      padding: 0 16px;
+      margin-bottom: 40px;
+    }
+
+    .qrComponent__image {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .qrComponent__link {
+      display: block;
+      height: 288px;
+      width: 288px;
+      background-color: var(--blue);
+    }
+    
 
   </style>
 </head>
@@ -59,10 +104,16 @@
   </header>
 
   <main>
-    <section>
-      <h2> Improve your front-end skills by building projects </h2>
+    <section class="qrComponent">
+      <a href="https://www.frontendmentor.io/" class="qrComponent__link"> 
+        <img src="/qr-code-component-main/images/image-qr-code.png" alt="frontendmentor.io" class="qrComponent__image" />
+      </a>
 
-      <p> Scan the QR code to visit Frontend Mentor and take your coding skills to the next level </p>
+      <div class="qrComponent__content">
+        <h2> Improve your front-end skills by building projects </h2>
+
+        <p> Scan the QR code to visit Frontend Mentor and take your coding skills to the next level </p>
+      </div>
     </section>
   </main>
   
