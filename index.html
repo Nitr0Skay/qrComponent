@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="qr-code-component-main/images/favicon-32x32.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -41,22 +41,25 @@
       box-sizing: border-box;
     }
 
-    p {
-      font-size: 15px;
-      font-family: "Outfit", sans-serif;
-    }
-
     body {
       background-color: var(--Slate300);
       height: 100dvh;
       position: relative;
     }
+    
+    p {
+      font-size: 15px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      color: var(--Slate500);
+      text-align: center; 
+    }
 
     .qrComponent {
       background-color: var(--white);
       border-radius: 20px;
-      height: 499px;
-      width: 320px;
+      height: 31.25rem;
+      width: 20rem;
       padding: 16px;
       display: flex;
       flex-direction: column;
@@ -68,20 +71,20 @@
     }
 
     .qrComponent h2 {
-      font-size: 22px;
+      font-size: 1.375rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
     }
 
     .qrComponent__content {
-      margin-top: 20px;
-      padding: 0 16px;
-      margin-bottom: 40px;
+      padding: 0 1rem;
     }
 
     .qrComponent__image {
       display: block;
       height: 100%;
       width: 100%;
-      border-radius: 20px;
+      
     }
 
     .qrComponent__link {
@@ -89,9 +92,15 @@
       height: 288px;
       width: 288px;
       background-color: var(--blue);
+      border-radius: 14px;
+      text-align: center;
+      font-size: 2rem;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--white);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
     }
-    
-
   </style>
 </head>
 
